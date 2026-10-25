@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MATIGAS · Citrus Honey Tea</title>
+<meta name="description" content="MATIGAS Calamansi Honey Tea Syrup. Galing sa 4 na punong ayaw sumuko, sa Nabua, Camarines Sur.">
+<meta property="og:title" content="MATIGAS · Citrus Honey Tea">
+<meta property="og:description" content="100 ang itinanim. 4 ang natira. Ngayon, tsaa na.">
+<meta property="og:image" content="img/inside.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--dg:#143422;--dg2:#1d4a31;--cr:#f0e6cc;--sg:#cddcaf;--ink:#1a1a1a;--gold:#e9b949;--card:#fffaf0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cr);color:var(--ink);line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+h1,h2,h3,.btn,.tag{font-family:Oswald,Impact,sans-serif;letter-spacing:.02em}
+header{background:var(--dg);color:var(--cr);position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+header img{height:40px}
+header a.btn{padding:8px 16px;font-size:15px}
+.btn{display:inline-block;background:var(--gold);color:var(--dg);text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;border:0;font-size:18px;cursor:pointer;text-transform:uppercase}
+.btn:active{transform:scale(.98)}
+.hero{background:var(--dg);color:var(--cr);padding:40px 0 56px}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero h1{font-size:clamp(52px,12vw,104px);line-height:.9}
+.hero .sub{font-family:Oswald;font-size:clamp(18px,4vw,24px);color:var(--sg);margin:10px 0 18px;text-transform:uppercase}
+.hero p{max-width:460px;margin-bottom:24px;opacity:.92}
+.hero img{border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+section{padding:56px 0}
+h2{font-size:clamp(30px,6vw,44px);color:var(--dg);line-height:1.05;margin-bottom:10px;text-transform:uppercase}
+.lead{max-width:620px;margin-bottom:28px;color:#333}
+.story{background:var(--card)}
+.story .grid{display:grid;gap:28px;align-items:center}
+.story blockquote{font-family:Oswald;font-size:clamp(26px,6vw,40px);color:var(--dg);line-height:1.15;margin:8px 0 18px}
+.story img{border-radius:12px}
+.products{display:grid;gap:20px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(20,52,34,.12);display:flex;flex-direction:column}
+.card .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:26px;color:var(--dg);text-transform:uppercase}
+.price{font-family:Oswald;font-size:30px;color:var(--dg)}
+.price small{font-size:15px;color:#666;font-family:Inter}
+.tag{display:inline-block;background:var(--dg);color:var(--cr);font-size:13px;padding:3px 10px;border-radius:999px;width:fit-content}
+.card .btn{margin-top:auto;text-align:center}
+.info{background:var(--dg);color:var(--cr)}
+.info h2{color:var(--cr)}
+.info .grid{display:grid;gap:22px}
+.info img{border-radius:12px}
+.facts{display:grid;gap:12px;margin-top:6px}
+.facts div{background:var(--dg2);border-radius:12px;padding:14px 16px}
+.facts b{font-family:Oswald;font-size:18px;color:var(--gold);display:block;text-transform:uppercase;letter-spacing:.03em}
+.order{background:var(--card)}
+form{background:#fff;border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(20,52,34,.12);display:grid;gap:14px;max-width:640px}
+label{font-weight:600;font-size:14px;color:var(--dg);display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid #cfd8c8;border-radius:10px;background:#fbfdf8;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--dg)}
+.row{display:grid;gap:14px}
+.total{font-family:Oswald;font-size:24px;color:var(--dg)}
+.note{font-size:13px;color:#555}
+#out{display:none;background:#eef5e6;border-radius:12px;padding:16px;white-space:pre-wrap;font-size:14px;border:1.5px dashed var(--dg)}
+.steps{display:grid;gap:10px;margin:0 0 22px;max-width:640px}
+.steps div{display:flex;gap:12px;align-items:flex-start}
+.steps span{flex:none;width:30px;height:30px;border-radius:50%;background:var(--dg);color:var(--cr);display:grid;place-items:center;font-family:Oswald}
+.wl{background:var(--dg);color:var(--cr);display:none}
+.wl h2{color:var(--cr)}
+.wl .lead{color:var(--sg)}
+.batch{display:grid;gap:20px;margin-bottom:28px}
+.bcard{background:var(--dg2);border-radius:16px;padding:22px}
+.bcard h3{font-size:30px;color:var(--gold);text-transform:uppercase}
+.bcard .k{font-family:Oswald;color:var(--sg);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.soon{display:inline-block;background:var(--gold);color:var(--dg);font-family:Oswald;font-size:13px;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.wl form{background:#fff;color:var(--ink)}
+.sold{display:none;background:var(--dg);color:var(--gold);font-family:Oswald;font-size:22px;text-align:center;padding:14px;border-radius:12px;margin-bottom:20px;text-transform:uppercase}
+body.soldout .wl{display:block}
+body.soldout #order,body.soldout .card .btn,body.soldout .bb{display:none}
+body.soldout .sold{display:block}
+body.soldout .card{opacity:.55}
+footer{background:var(--dg);color:var(--sg);padding:30px 0;font-size:14px;text-align:center}
+footer img{height:56px;margin:0 auto 10px}
+ @media(min-width:760px){
+ .batch{grid-template-columns:1fr 1fr}
+ .hero .wrap{grid-template-columns:1fr 1.1fr}
+ .story .grid{grid-template-columns:1fr 1fr}
+ .products{grid-template-columns:1fr 1fr}
+ .info .grid{grid-template-columns:1fr 1fr}
+ .row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <img src="img/logo.png" alt="Green Ralph">
+  <a class="btn" id="hbtn" href="#order">Order</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>MATIGAS</h1>
+    <div class="sub">Iced · Hot Citrus Honey Tea</div>
+    <p>100 ang itinanim. 4 ang natira. Ang bunga nila, matigas daw at hindi mabebenta. Pinisa namin isa-isa, at ginawang tsaa.</p>
+    <a class="btn" id="cta" href="#shop">Bumili ng Jar</a>
+  </div>
+  <img src="img/inside.jpg" alt="MATIGAS jar">
+</div></div>
+
+<section class="story"><div class="wrap grid">
+  <div>
+    <h2>Ang punong ayaw sumuko</h2>
+    <blockquote>"Matigas sa labas.<br>May laman sa loob."</blockquote>
+    <p class="lead">Noong 2016, nagtanim kami ng 100 grafted na calamansi sa aming lupa sa Nabua, Camarines Sur. Halos lahat namatay. Apat lang ang nabuhay. Matigas ang bunga, kaya walang bumibili. Kaya kami na mismo ang gumawa ng paraan: pinisa ng kamay, kilo-kilo, at ginawang honey tea syrup.</p>
+  </div>
+  <img src="img/story.jpg" alt="Ang kuwento ng MATIGAS">
+</div></section>
+
+<section id="shop"><div class="wrap">
+  <h2>Shop</h2>
+  <p class="lead">Small batch. Hand-packed. Limited lang, at kapag naubos, hintayin ang susunod na ani.</p>
+  <div class="sold">Sold out ang Batch 1. Salamat! Sumali sa Batch 2 waitlist sa ibaba.</div>
+  <div class="products">
+    <div class="card">
+      <img src="img/jar.jpg" alt="MATIGAS 1 jar 220 ml">
+      <div class="body">
+        <span class="tag">220 ml</span>
+        <h3>1 Jar</h3>
+        <div class="price">₱279</div>
+        <p>Isang jar ng MATIGAS Calamansi Honey Tea Syrup. Gawing mainit o iced tea sa bahay.</p>
+        <a class="btn" href="#order" onclick="pick('1 Jar')">Order 1 Jar</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/bundle.jpg" alt="MATIGAS 2-Jar Bundle">
+      <div class="body">
+        <span class="tag">Save ₱19</span>
+        <h3>2-Jar Bundle</h3>
+        <div class="price">₱539</div>
+        <p>Isa sa'yo, isa pang-regalo. Dalawang 220 ml jar.</p>
+        <a class="btn" href="#order" onclick="pick('2-Jar Bundle')">Order Bundle</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="info"><div class="wrap">
+  <h2>Paano inumin</h2>
+  <div class="grid">
+    <img src="img/howto.jpg" alt="Paano gawin ang MATIGAS tea">
+    <div class="facts">
+      <div><b>Hot</b>3 kutsara + mainit na tubig.</div>
+      <div><b>Iced</b>Tunawin ang 3 kutsara sa konting mainit na tubig, saka lagyan ng malamig na tubig at yelo.</div>
+      <div><b>Sangkap</b>Calamansi, sugar, honey, salt.</div>
+      <div><b>Imbakan</b>Ilagay sa ref. Malinis at tuyong kutsara lang. Hindi para sa batang wala pang 1 taon (may honey).</div>
+      <div class="bb"><b>Best before</b>October 28, 2026. Quality date, hindi expiry.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <h2>Mag-order</h2>
+  <div class="steps">
+    <div><span>1</span><p>Punan ang form sa ibaba.</p></div>
+    <div><span>2</span><p>Pindutin ang <b>Send via Messenger</b>. Makokopya ang order mo at bubukas ang chat namin. I-paste lang at i-send.</p></div>
+    <div><span>3</span><p>Kokumpirmahin namin ang order at shipping fee. Bayad sa GCash o COD.</p></div>
+  </div>
+  <form id="f" onsubmit="return send(event)">
+    <div class="row">
+      <label>Pangalan<input name="name" required autocomplete="name"></label>
+      <label>Mobile number<input name="phone" required inputmode="tel" autocomplete="tel"></label>
+    </div>
+    <div class="row">
+      <label>Produkto
+        <select name="item" id="item" onchange="calc()">
+          <option value="1 Jar">1 Jar · ₱279</option>
+          <option value="2-Jar Bundle">2-Jar Bundle · ₱539</option>
+        </select>
+      </label>
+      <label>Ilan<input name="qty" id="qty" type="number" min="1" max="10" value="1" onchange="calc()" oninput="calc()"></label>
+    </div>
+    <label>Paano kukunin
+      <select name="ship" id="ship" onchange="calc()">
+        <option value="Pickup sa Nabua (libre)">Pickup sa Nabua (libre)</option>
+        <option value="Hatid sa loob ng Nabua">Hatid sa loob ng Nabua</option>
+        <option value="J&T, Bicol lang (bayad ng buyer)">J&amp;T, Bicol lang, next-day (bayad ng buyer)</option>
+      </select>
+    </label>
+    <label>Address (para sa hatid o shipping)<textarea name="addr" rows="2"></textarea></label>
+    <label>Bayad
+      <select name="pay">
+        <option>GCash</option>
+        <option>Cash on pickup / COD</option>
+      </select>
+    </label>
+    <div class="total" id="total">Subtotal: ₱279</div>
+    <p class="note">Hindi pa kasama ang shipping fee. Dahil kailangan naka-ref, Nabua at Bicol lang muna ang shipping ng batch na ito. Taga-ibang lugar? Sumali sa Batch 2 waitlist.</p>
+    <button class="btn" type="submit">Send via Messenger</button>
+    <div id="out"></div>
+  </form>
+</div></section>
+
+<section class="wl" id="waitlist"><div class="wrap">
+  <h2>Batch 2 Waitlist</h2>
+  <p class="lead">Naubos ang Batch 1. Sa susunod na ani, dalawa na sila. Mag-sign up para ikaw ang unang ma-message pagbukas ng orders.</p>
+  <div class="batch">
+    <div class="bcard">
+      <span class="soon">Batch 2</span>
+      <h3>MATIGAS</h3>
+      <div class="k">Citrus Honey Tea</div>
+      <p>Ang orihinal. Galing sa 4 na punong ayaw sumuko.</p>
+    </div>
+    <div class="bcard">
+      <span class="soon">Bago</span>
+      <h3>MALAMBOT</h3>
+      <div class="k">Calamansi + Ginger</div>
+      <p>A softer story. Same roots. Ang kapatid ng MATIGAS, may luya para sa malamig na gabi.</p>
+    </div>
+  </div>
+  <form id="w" onsubmit="return wait(event)">
+    <div class="row">
+      <label>Pangalan<input name="name" required autocomplete="name"></label>
+      <label>Mobile number<input name="phone" required inputmode="tel" autocomplete="tel"></label>
+    </div>
+    <div class="row">
+      <label>Lugar (city / province)<input name="place" required></label>
+      <label>Gusto ko ng
+        <select name="want">
+          <option>MATIGAS</option>
+          <option>MALAMBOT</option>
+          <option>Pareho</option>
+        </select>
+      </label>
+    </div>
+    <label>Ilang jar ang balak mo?<input name="qty" type="number" min="1" max="20" value="1"></label>
+    <button class="btn" type="submit">Sumali sa Waitlist</button>
+    <div id="wout" style="display:none;background:#eef5e6;border-radius:12px;padding:16px;white-space:pre-wrap;font-size:14px;border:1.5px dashed var(--dg)"></div>
+  </form>
+</div></section>
+
+<footer>
+  <img src="img/logo.png" alt="Green Ralph">
+  <p>MATIGAS · Galing sa farm sa Nabua, Camarines Sur</p>
+  <p><a href="https://www.facebook.com/greenralph">facebook.com/greenralph</a></p>
+</footer>
+
+<script>
+// I-set sa true kapag ubos na ang Batch 1. (Preview: idagdag ang ?soldout=1 sa URL)
+const SOLD_OUT=false;
+const MSG='https://m.me/greenralph';
+if(SOLD_OUT||/[?&]soldout=1/.test(location.search)){
+  document.body.classList.add('soldout');
+  const h=document.getElementById('hbtn'); h.textContent='Waitlist'; h.href='#waitlist';
+  const c=document.getElementById('cta'); c.textContent='Sumali sa Batch 2'; c.href='#waitlist';
+}
+function copyGo(t,el){
+  el.style.display='block'; el.textContent=t+'\n\n(Nakopya na. I-paste sa Messenger.)';
+  const go=()=>window.open(MSG,'_blank');
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(go,go);}else{go();}
+}
+function wait(e){
+  e.preventDefault();
+  const f=new FormData(document.getElementById('w'));
+  copyGo('MATIGAS BATCH 2 WAITLIST\n'+
+    'Pangalan: '+f.get('name')+'\n'+
+    'Mobile: '+f.get('phone')+'\n'+
+    'Lugar: '+f.get('place')+'\n'+
+    'Gusto: '+f.get('want')+'\n'+
+    'Ilang jar: '+f.get('qty'), document.getElementById('wout'));
+  return false;
+}
+const P={'1 Jar':279,'2-Jar Bundle':539};
+function pick(v){document.getElementById('item').value=v;calc();}
+function calc(){
+  const i=document.getElementById('item').value;
+  const q=Math.max(1,parseInt(document.getElementById('qty').value)||1);
+  document.getElementById('total').textContent='Subtotal: ₱'+(P[i]*q).toLocaleString();
+}
+function send(e){
+  e.preventDefault();
+  const f=new FormData(document.getElementById('f'));
+  const q=Math.max(1,parseInt(f.get('qty'))||1);
+  const t='MATIGAS ORDER\n'+
+    'Pangalan: '+f.get('name')+'\n'+
+    'Mobile: '+f.get('phone')+'\n'+
+    'Order: '+q+' x '+f.get('item')+'\n'+
+    'Subtotal: ₱'+(P[f.get('item')]*q).toLocaleString()+'\n'+
+    'Kukunin: '+f.get('ship')+'\n'+
+    'Address: '+(f.get('addr')||'-')+'\n'+
+    'Bayad: '+f.get('pay');
+  copyGo(t,document.getElementById('out'));
+  return false;
+}
+calc();
+</script>
+</body>
+</html>
